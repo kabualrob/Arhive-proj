@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ARHIVE1DataSet" targetNamespace="http://tempuri.org/ARHIVE1DataSet.xsd" xmlns:mstns="http://tempuri.org/ARHIVE1DataSet.xsd" xmlns="http://tempuri.org/ARHIVE1DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ARHIVE1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ARHIVE1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Arhive2018.Properties.Settings.GlobalReference.Default.ARHIVE1ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ARHIVE_VIEWTableAdapter" GeneratorDataComponentClassName="ARHIVE_VIEWTableAdapter" Name="ARHIVE_VIEW" UserDataComponentName="ARHIVE_VIEWTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARHIVE1ConnectionString (Settings)" DbObjectName="ARHIVE1.dbo.ARHIVE_VIEW" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ID, OBJECT, AGREEMENT, CONVERT(VARCHAR(10), RELEASE_DATE, 103) AS RELEASE_DATE, FIO, REPORT, QUANITY, COMMENT
+FROM            ARHIVE_VIEW</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="OBJECT" DataSetColumn="OBJECT" />
+              <Mapping SourceColumn="AGREEMENT" DataSetColumn="AGREEMENT" />
+              <Mapping SourceColumn="FIO" DataSetColumn="FIO" />
+              <Mapping SourceColumn="REPORT" DataSetColumn="REPORT" />
+              <Mapping SourceColumn="QUANITY" DataSetColumn="QUANITY" />
+              <Mapping SourceColumn="COMMENT" DataSetColumn="COMMENT" />
+              <Mapping SourceColumn="RELEASE_DATE" DataSetColumn="RELEASE_DATE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ARHIVE1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ARHIVE1DataSet" msprop:Generator_UserDSName="ARHIVE1DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ARHIVE_VIEW" msprop:Generator_TableClassName="ARHIVE_VIEWDataTable" msprop:Generator_TableVarName="tableARHIVE_VIEW" msprop:Generator_RowChangedName="ARHIVE_VIEWRowChanged" msprop:Generator_TablePropName="ARHIVE_VIEW" msprop:Generator_RowDeletingName="ARHIVE_VIEWRowDeleting" msprop:Generator_RowChangingName="ARHIVE_VIEWRowChanging" msprop:Generator_RowEvHandlerName="ARHIVE_VIEWRowChangeEventHandler" msprop:Generator_RowDeletedName="ARHIVE_VIEWRowDeleted" msprop:Generator_RowClassName="ARHIVE_VIEWRow" msprop:Generator_UserTableName="ARHIVE_VIEW" msprop:Generator_RowEvArgName="ARHIVE_VIEWRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="OBJECT" msprop:Generator_ColumnVarNameInTable="columnOBJECT" msprop:Generator_ColumnPropNameInRow="OBJECT" msprop:Generator_ColumnPropNameInTable="OBJECTColumn" msprop:Generator_UserColumnName="OBJECT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AGREEMENT" msprop:Generator_ColumnVarNameInTable="columnAGREEMENT" msprop:Generator_ColumnPropNameInRow="AGREEMENT" msprop:Generator_ColumnPropNameInTable="AGREEMENTColumn" msprop:Generator_UserColumnName="AGREEMENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIO" msprop:Generator_ColumnVarNameInTable="columnFIO" msprop:Generator_ColumnPropNameInRow="FIO" msprop:Generator_ColumnPropNameInTable="FIOColumn" msprop:Generator_UserColumnName="FIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REPORT" msprop:Generator_ColumnVarNameInTable="columnREPORT" msprop:Generator_ColumnPropNameInRow="REPORT" msprop:Generator_ColumnPropNameInTable="REPORTColumn" msprop:Generator_UserColumnName="REPORT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QUANITY" msprop:Generator_ColumnVarNameInTable="columnQUANITY" msprop:Generator_ColumnPropNameInRow="QUANITY" msprop:Generator_ColumnPropNameInTable="QUANITYColumn" msprop:Generator_UserColumnName="QUANITY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COMMENT" msprop:Generator_ColumnVarNameInTable="columnCOMMENT" msprop:Generator_ColumnPropNameInRow="COMMENT" msprop:Generator_ColumnPropNameInTable="COMMENTColumn" msprop:Generator_UserColumnName="COMMENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RELEASE_DATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRELEASE_DATE" msprop:Generator_ColumnPropNameInRow="RELEASE_DATE" msprop:Generator_ColumnPropNameInTable="RELEASE_DATEColumn" msprop:Generator_UserColumnName="RELEASE_DATE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

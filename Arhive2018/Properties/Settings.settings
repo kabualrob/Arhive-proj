@@ -1,0 +1,89 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Arhive2018.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=ELMA-TEST\SQLEXPRESS;Initial Catalog=ARHIVE1;User ID=sa;Password=!!qazxsw@123</Value>
+    </Setting>
+    <Setting Name="CheckUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT     TOP (1)       FIO, ISADMIN, BLOCKED,[ID],[DESCRIPTION]
+
+FROM            dbo.[USER]
+WHERE        (LOGIN = @lgn) AND (PASSWORD = @psw)</Value>
+    </Setting>
+    <Setting Name="UserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ARHIVE1ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=ELMA-TEST\SQLEXPRESS;Initial Catalog=ARHIVE1;User ID=sa;Password=!!qazxsw@123&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=ELMA-TEST\SQLEXPRESS;Initial Catalog=ARHIVE1;User ID=sa;Password=!!qazxsw@123</Value>
+    </Setting>
+    <Setting Name="UpdateRow" Type="System.String" Scope="User">
+      <Value Profile="(Default)"> UPDATE [ARHIVE1].[dbo].[ARHIVE]
+   SET [OBJECT] =@obj
+      ,[AGREEMENT] = @agr
+      ,[RELEASE_DATE] = @date
+      ,[USER_ID] = @usr
+      ,[REPORT_ID] = @rep
+      ,[QUANITY] = @qty
+      ,[COMMENT] = @com
+ WHERE ID=@id</Value>
+    </Setting>
+    <Setting Name="InsertRow" Type="System.String" Scope="User">
+      <Value Profile="(Default)"> INSERT INTO [ARHIVE1].[dbo].[ARHIVE]
+   ( [OBJECT]
+      ,[AGREEMENT] 
+      ,[RELEASE_DATE] 
+      ,[USER_ID] 
+      ,[REPORT_ID]
+      ,[QUANITY] 
+      ,[COMMENT] 
+,[CREATED_DATE]
+,[CREATED_BY]
+)
+OUTPUT inserted.id
+ VALUES (@obj,@agr,@date,@usr,@rep,@qty,@com,@createdOn,@createdBy)</Value>
+    </Setting>
+    <Setting Name="DeleteRow" Type="System.String" Scope="User">
+      <Value Profile="(Default)"> DELETE FROM [ARHIVE1].[dbo].[ARHIVE]
+  WHERE ID=@id</Value>
+    </Setting>
+    <Setting Name="SelectReport" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT [REPORT] ,[ID] FROM [ARHIVE1].[dbo].[REPORT_TYPE] WHERE BLOCKED=0</Value>
+    </Setting>
+    <Setting Name="CheckIfReportInUse" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT 1 FROM [ARHIVE1].[dbo].[ARHIVE] WHERE REPORT_ID=@ID</Value>
+    </Setting>
+    <Setting Name="CheckIfUserInUse" Type="System.String" Scope="User">
+      <Value Profile="(Default)">  SELECT 1 FROM [ARHIVE1].[dbo].[ARHIVE] WHERE ID=@ID</Value>
+    </Setting>
+    <Setting Name="ArhivePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GetArhivePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT [PATH] FROM [ARHIVE1].[dbo].[PATH] WHERE ID=1</Value>
+    </Setting>
+    <Setting Name="UpdatePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UPDATE [ARHIVE1].[dbo].[PATH] SET [PATH]=@PATH WHERE ID=1</Value>
+    </Setting>
+    <Setting Name="LogoPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GetLogoPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT [PATH] FROM [ARHIVE1].[dbo].[PATH] WHERE ID=2</Value>
+    </Setting>
+    <Setting Name="UpdatePathLogo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UPDATE [ARHIVE1].[dbo].[PATH] SET [PATH]=@PATH WHERE ID=2</Value>
+    </Setting>
+    <Setting Name="SelectUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT [FIO] ,[ID] FROM [ARHIVE1].[dbo].[USER] WHERE BLOCKED=0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
