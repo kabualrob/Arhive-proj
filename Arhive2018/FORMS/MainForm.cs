@@ -213,7 +213,7 @@ namespace Arhive2018.FORMS
             openFileDialog1.ShowDialog();
 
         }
-
+        //выбор файла pdf
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             if (openFileDialog1.FileName.EndsWith(".pdf"))
