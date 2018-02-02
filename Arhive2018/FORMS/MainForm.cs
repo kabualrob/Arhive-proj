@@ -195,7 +195,7 @@ namespace Arhive2018.FORMS
             }
             else MessageBox.Show(string.Format(@"Выбранный файл {0} не соответствует формату Pdf",openFileDialog1.FileName), @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
+        //экспорт архива в pdf
         private void exportToPdfBn_Click(object sender, EventArgs e)
         {
             saveFileDialog1.Filter = " Portable Document Format|*.pdf";
@@ -299,12 +299,6 @@ namespace Arhive2018.FORMS
                 splitContainer1.SplitterDistance = 130;
                 radGroupBox1.Visible = true;
             }
-            /*  if (!objectTB.Focused)
-              {
-                  objectTB.ForeColor = Color.Gray;
-                  objectTB.Text = "Город, Адрес, Наименование -(если есть)";
-                  objectTB.Select(objectTB.TextLength, 0);                
-              }*/
             objectTB.Text = "";
            agreementNumberTB.Text = "";
             releaseDateDTP.Value = DateTime.Now;
