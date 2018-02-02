@@ -299,12 +299,6 @@ namespace Arhive2018.FORMS
                 splitContainer1.SplitterDistance = 130;
                 radGroupBox1.Visible = true;
             }
-            /*  if (!objectTB.Focused)
-              {
-                  objectTB.ForeColor = Color.Gray;
-                  objectTB.Text = "Город, Адрес, Наименование -(если есть)";
-                  objectTB.Select(objectTB.TextLength, 0);                
-              }*/
             objectTB.Text = "";
            agreementNumberTB.Text = "";
             releaseDateDTP.Value = DateTime.Now;
