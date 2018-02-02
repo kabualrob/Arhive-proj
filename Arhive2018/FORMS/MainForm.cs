@@ -195,7 +195,7 @@ namespace Arhive2018.FORMS
             }
             else MessageBox.Show(string.Format(@"Выбранный файл {0} не соответствует формату Pdf",openFileDialog1.FileName), @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
+        //экспорт архива в pdf
         private void exportToPdfBn_Click(object sender, EventArgs e)
         {
             saveFileDialog1.Filter = " Portable Document Format|*.pdf";
