@@ -517,7 +517,6 @@
             this.radgridView1.CellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridView1_CellFormatting);
             this.radgridView1.SelectionChanged += new System.EventHandler(this.MasterTemplate_SelectionChanged);
             this.radgridView1.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.radGridView1_CellClick);
-            this.radgridView1.CellMouseMove += new Telerik.WinControls.UI.CellMouseMoveEventHandler(this.radgridView1_CellMouseMove);
             this.radgridView1.ContextMenuOpening += new Telerik.WinControls.UI.ContextMenuOpeningEventHandler(this.radgridView1_ContextMenuOpening);
             this.radgridView1.MouseHover += new System.EventHandler(this.radgridView1_MouseHover);
             this.radgridView1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.radgridView1_MouseMove);

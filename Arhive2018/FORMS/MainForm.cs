@@ -386,10 +386,6 @@ namespace Arhive2018.FORMS
            // this.Cursor = Cursors.Hand;
         }
 
-        private void radgridView1_CellMouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
         Cursor originalCursor;
         private void radgridView1_MouseMove(object sender, MouseEventArgs e)
         {
