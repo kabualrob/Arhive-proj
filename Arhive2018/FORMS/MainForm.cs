@@ -272,6 +272,7 @@ namespace Arhive2018.FORMS
             radgridView1.Columns["DOWNLOAD"].IsVisible = true;
         }
 
+
         private void objectTB_Enter(object sender, EventArgs e)
         {
             if (objectTB.ForeColor == Color.Gray)
