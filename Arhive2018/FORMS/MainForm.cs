@@ -364,7 +364,7 @@ namespace Arhive2018.FORMS
             else
                 MessageBox.Show("Невозможно удалить новую запись!");
         }
-
+        //Переименование и ограничение контекстного меню таблицв по нажатиж на правую клавишу мыши
         private void radgridView1_ContextMenuOpening(object sender, ContextMenuOpeningEventArgs e)
         {
             if (e.ContextMenu.Items.Count > 0)
@@ -381,10 +381,6 @@ namespace Arhive2018.FORMS
         }
         }
 
-        private void radgridView1_CellMouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
         Cursor originalCursor;
         private void radgridView1_MouseMove(object sender, MouseEventArgs e)
         {

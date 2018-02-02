@@ -47,23 +47,23 @@
             this.radPageViewPage1 = new Telerik.WinControls.UI.RadPageViewPage();
             this.saveUsersBn = new Telerik.WinControls.UI.RadButton();
             this.usresSettingsRGV = new Telerik.WinControls.UI.RadGridView();
+            this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersDataSet = new Arhive2018.UsersDataSet();
             this.radPageViewPage2 = new Telerik.WinControls.UI.RadPageViewPage();
             this.saveReportsBn = new Telerik.WinControls.UI.RadButton();
             this.reportSettingsRGV = new Telerik.WinControls.UI.RadGridView();
-            this.radPageViewPage3 = new Telerik.WinControls.UI.RadPageViewPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.arhivePathTB = new Telerik.WinControls.UI.RadTextBox();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.archivePathBn = new Telerik.WinControls.UI.RadButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.logoPathRTB = new Telerik.WinControls.UI.RadTextBox();
-            this.LogoPathBn = new Telerik.WinControls.UI.RadButton();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pathsSaveBn = new Telerik.WinControls.UI.RadButton();
-            this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersDataSet = new Arhive2018.UsersDataSet();
             this.rEPORTTYPEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportsDataSet4 = new Arhive2018.ReportsDataSet4();
+            this.radPageViewPage3 = new Telerik.WinControls.UI.RadPageViewPage();
+            this.pathsSaveBn = new Telerik.WinControls.UI.RadButton();
+            this.LogoPathBn = new Telerik.WinControls.UI.RadButton();
+            this.logoPathRTB = new Telerik.WinControls.UI.RadTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.archivePathBn = new Telerik.WinControls.UI.RadButton();
+            this.arhivePathTB = new Telerik.WinControls.UI.RadTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.uSERTableAdapter = new Arhive2018.UsersDataSetTableAdapters.USERTableAdapter();
             this.rEPORT_TYPETableAdapter = new Arhive2018.ReportsDataSet4TableAdapters.REPORT_TYPETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.SettingsRPV)).BeginInit();
@@ -72,20 +72,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.saveUsersBn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usresSettingsRGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usresSettingsRGV.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).BeginInit();
             this.radPageViewPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.saveReportsBn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportSettingsRGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportSettingsRGV.MasterTemplate)).BeginInit();
-            this.radPageViewPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.arhivePathTB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.archivePathBn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPathRTB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoPathBn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pathsSaveBn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEPORTTYPEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportsDataSet4)).BeginInit();
+            this.radPageViewPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsSaveBn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPathBn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPathRTB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.archivePathBn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arhivePathTB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,17 +109,17 @@
             this.radPageViewPage1.Controls.Add(this.saveUsersBn);
             this.radPageViewPage1.Controls.Add(this.usresSettingsRGV);
             this.radPageViewPage1.Image = ((System.Drawing.Image)(resources.GetObject("radPageViewPage1.Image")));
-            this.radPageViewPage1.ItemSize = new System.Drawing.SizeF(109F, 32F);
-            this.radPageViewPage1.Location = new System.Drawing.Point(10, 41);
+            this.radPageViewPage1.ItemSize = new System.Drawing.SizeF(113F, 36F);
+            this.radPageViewPage1.Location = new System.Drawing.Point(10, 45);
             this.radPageViewPage1.Name = "radPageViewPage1";
-            this.radPageViewPage1.Size = new System.Drawing.Size(868, 397);
+            this.radPageViewPage1.Size = new System.Drawing.Size(868, 393);
             this.radPageViewPage1.Text = "Пользователи";
             // 
             // saveUsersBn
             // 
             this.saveUsersBn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.saveUsersBn.Image = ((System.Drawing.Image)(resources.GetObject("saveUsersBn.Image")));
-            this.saveUsersBn.Location = new System.Drawing.Point(675, 354);
+            this.saveUsersBn.Location = new System.Drawing.Point(720, 354);
             this.saveUsersBn.Name = "saveUsersBn";
             this.saveUsersBn.Size = new System.Drawing.Size(145, 33);
             this.saveUsersBn.TabIndex = 2;
@@ -207,22 +207,32 @@
             this.usresSettingsRGV.CellValueChanged += new Telerik.WinControls.UI.GridViewCellEventHandler(this.usresSettingsRGV_CellValueChanged);
             this.usresSettingsRGV.ContextMenuOpening += new Telerik.WinControls.UI.ContextMenuOpeningEventHandler(this.usresSettingsRGV_ContextMenuOpening);
             // 
+            // uSERBindingSource
+            // 
+            this.uSERBindingSource.DataMember = "USER";
+            this.uSERBindingSource.DataSource = this.usersDataSet;
+            // 
+            // usersDataSet
+            // 
+            this.usersDataSet.DataSetName = "UsersDataSet";
+            this.usersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // radPageViewPage2
             // 
             this.radPageViewPage2.Controls.Add(this.saveReportsBn);
             this.radPageViewPage2.Controls.Add(this.reportSettingsRGV);
             this.radPageViewPage2.Image = ((System.Drawing.Image)(resources.GetObject("radPageViewPage2.Image")));
-            this.radPageViewPage2.ItemSize = new System.Drawing.SizeF(107F, 32F);
-            this.radPageViewPage2.Location = new System.Drawing.Point(10, 41);
+            this.radPageViewPage2.ItemSize = new System.Drawing.SizeF(111F, 36F);
+            this.radPageViewPage2.Location = new System.Drawing.Point(10, 45);
             this.radPageViewPage2.Name = "radPageViewPage2";
-            this.radPageViewPage2.Size = new System.Drawing.Size(868, 397);
+            this.radPageViewPage2.Size = new System.Drawing.Size(868, 393);
             this.radPageViewPage2.Text = "Виды отчетов";
             // 
             // saveReportsBn
             // 
             this.saveReportsBn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.saveReportsBn.Image = ((System.Drawing.Image)(resources.GetObject("saveReportsBn.Image")));
-            this.saveReportsBn.Location = new System.Drawing.Point(679, 356);
+            this.saveReportsBn.Location = new System.Drawing.Point(720, 354);
             this.saveReportsBn.Name = "saveReportsBn";
             this.saveReportsBn.Size = new System.Drawing.Size(145, 33);
             this.saveReportsBn.TabIndex = 3;
@@ -239,7 +249,7 @@
             this.reportSettingsRGV.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.reportSettingsRGV.ForeColor = System.Drawing.Color.Black;
             this.reportSettingsRGV.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.reportSettingsRGV.Location = new System.Drawing.Point(29, 29);
+            this.reportSettingsRGV.Location = new System.Drawing.Point(3, 22);
             // 
             // 
             // 
@@ -249,13 +259,13 @@
             gridViewTextBoxColumn5.HeaderText = "Вид отчета";
             gridViewTextBoxColumn5.IsAutoGenerated = true;
             gridViewTextBoxColumn5.Name = "REPORT";
-            gridViewTextBoxColumn5.Width = 339;
+            gridViewTextBoxColumn5.Width = 363;
             gridViewTextBoxColumn6.EnableExpressionEditor = false;
             gridViewTextBoxColumn6.FieldName = "DESCRIPTION";
             gridViewTextBoxColumn6.HeaderText = "Описание";
             gridViewTextBoxColumn6.IsAutoGenerated = true;
             gridViewTextBoxColumn6.Name = "DESCRIPTION";
-            gridViewTextBoxColumn6.Width = 356;
+            gridViewTextBoxColumn6.Width = 381;
             gridViewTextBoxColumn7.DataType = typeof(int);
             gridViewTextBoxColumn7.EnableExpressionEditor = false;
             gridViewTextBoxColumn7.FieldName = "ID";
@@ -269,7 +279,7 @@
             gridViewCheckBoxColumn3.HeaderText = "Заблокировано";
             gridViewCheckBoxColumn3.MinWidth = 20;
             gridViewCheckBoxColumn3.Name = "BLOCKED";
-            gridViewCheckBoxColumn3.Width = 92;
+            gridViewCheckBoxColumn3.Width = 99;
             this.reportSettingsRGV.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn5,
             gridViewTextBoxColumn6,
@@ -279,11 +289,21 @@
             this.reportSettingsRGV.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.reportSettingsRGV.Name = "reportSettingsRGV";
             this.reportSettingsRGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.reportSettingsRGV.Size = new System.Drawing.Size(809, 298);
+            this.reportSettingsRGV.Size = new System.Drawing.Size(862, 324);
             this.reportSettingsRGV.TabIndex = 0;
             this.reportSettingsRGV.Text = "radGridView2";
             this.reportSettingsRGV.RowsChanging += new Telerik.WinControls.UI.GridViewCollectionChangingEventHandler(this.radGridView2_RowsChanging);
             this.reportSettingsRGV.ContextMenuOpening += new Telerik.WinControls.UI.ContextMenuOpeningEventHandler(this.reportSettingsRGV_ContextMenuOpening);
+            // 
+            // rEPORTTYPEBindingSource
+            // 
+            this.rEPORTTYPEBindingSource.DataMember = "REPORT_TYPE";
+            this.rEPORTTYPEBindingSource.DataSource = this.reportsDataSet4;
+            // 
+            // reportsDataSet4
+            // 
+            this.reportsDataSet4.DataSetName = "ReportsDataSet4";
+            this.reportsDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // radPageViewPage3
             // 
@@ -295,56 +315,22 @@
             this.radPageViewPage3.Controls.Add(this.arhivePathTB);
             this.radPageViewPage3.Controls.Add(this.label1);
             this.radPageViewPage3.Image = ((System.Drawing.Image)(resources.GetObject("radPageViewPage3.Image")));
-            this.radPageViewPage3.ItemSize = new System.Drawing.SizeF(149F, 32F);
-            this.radPageViewPage3.Location = new System.Drawing.Point(10, 41);
+            this.radPageViewPage3.ItemSize = new System.Drawing.SizeF(153F, 36F);
+            this.radPageViewPage3.Location = new System.Drawing.Point(10, 45);
             this.radPageViewPage3.Name = "radPageViewPage3";
-            this.radPageViewPage3.Size = new System.Drawing.Size(868, 397);
+            this.radPageViewPage3.Size = new System.Drawing.Size(868, 393);
             this.radPageViewPage3.Text = "Папки по умолчанию";
             // 
-            // label1
+            // pathsSaveBn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Архив:";
-            // 
-            // arhivePathTB
-            // 
-            this.arhivePathTB.Location = new System.Drawing.Point(122, 30);
-            this.arhivePathTB.Name = "arhivePathTB";
-            this.arhivePathTB.Size = new System.Drawing.Size(217, 20);
-            this.arhivePathTB.TabIndex = 1;
-            // 
-            // folderBrowserDialog1
-            // 
-            this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
-            // 
-            // archivePathBn
-            // 
-            this.archivePathBn.Location = new System.Drawing.Point(362, 32);
-            this.archivePathBn.Name = "archivePathBn";
-            this.archivePathBn.Size = new System.Drawing.Size(110, 24);
-            this.archivePathBn.TabIndex = 2;
-            this.archivePathBn.Text = "Выбрать";
-            this.archivePathBn.Click += new System.EventHandler(this.archivePathBn_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Логотип:";
-            // 
-            // logoPathRTB
-            // 
-            this.logoPathRTB.Location = new System.Drawing.Point(122, 93);
-            this.logoPathRTB.Name = "logoPathRTB";
-            this.logoPathRTB.Size = new System.Drawing.Size(217, 20);
-            this.logoPathRTB.TabIndex = 4;
+            this.pathsSaveBn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pathsSaveBn.Image = ((System.Drawing.Image)(resources.GetObject("pathsSaveBn.Image")));
+            this.pathsSaveBn.Location = new System.Drawing.Point(720, 354);
+            this.pathsSaveBn.Name = "pathsSaveBn";
+            this.pathsSaveBn.Size = new System.Drawing.Size(145, 33);
+            this.pathsSaveBn.TabIndex = 6;
+            this.pathsSaveBn.Text = "Сохранить";
+            this.pathsSaveBn.Click += new System.EventHandler(this.pathsSaveBn_Click);
             // 
             // LogoPathBn
             // 
@@ -355,41 +341,55 @@
             this.LogoPathBn.Text = "Выбрать";
             this.LogoPathBn.Click += new System.EventHandler(this.LogoPathBn_Click);
             // 
+            // logoPathRTB
+            // 
+            this.logoPathRTB.Location = new System.Drawing.Point(122, 93);
+            this.logoPathRTB.Name = "logoPathRTB";
+            this.logoPathRTB.Size = new System.Drawing.Size(217, 20);
+            this.logoPathRTB.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Логотип:";
+            // 
+            // archivePathBn
+            // 
+            this.archivePathBn.Location = new System.Drawing.Point(362, 32);
+            this.archivePathBn.Name = "archivePathBn";
+            this.archivePathBn.Size = new System.Drawing.Size(110, 24);
+            this.archivePathBn.TabIndex = 2;
+            this.archivePathBn.Text = "Выбрать";
+            this.archivePathBn.Click += new System.EventHandler(this.archivePathBn_Click);
+            // 
+            // arhivePathTB
+            // 
+            this.arhivePathTB.Location = new System.Drawing.Point(122, 30);
+            this.arhivePathTB.Name = "arhivePathTB";
+            this.arhivePathTB.Size = new System.Drawing.Size(217, 20);
+            this.arhivePathTB.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Архив:";
+            // 
+            // folderBrowserDialog1
+            // 
+            this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
-            // 
-            // pathsSaveBn
-            // 
-            this.pathsSaveBn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pathsSaveBn.Image = ((System.Drawing.Image)(resources.GetObject("pathsSaveBn.Image")));
-            this.pathsSaveBn.Location = new System.Drawing.Point(632, 347);
-            this.pathsSaveBn.Name = "pathsSaveBn";
-            this.pathsSaveBn.Size = new System.Drawing.Size(145, 33);
-            this.pathsSaveBn.TabIndex = 6;
-            this.pathsSaveBn.Text = "Сохранить";
-            this.pathsSaveBn.Click += new System.EventHandler(this.pathsSaveBn_Click);
-            // 
-            // uSERBindingSource
-            // 
-            this.uSERBindingSource.DataMember = "USER";
-            this.uSERBindingSource.DataSource = this.usersDataSet;
-            // 
-            // usersDataSet
-            // 
-            this.usersDataSet.DataSetName = "UsersDataSet";
-            this.usersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rEPORTTYPEBindingSource
-            // 
-            this.rEPORTTYPEBindingSource.DataMember = "REPORT_TYPE";
-            this.rEPORTTYPEBindingSource.DataSource = this.reportsDataSet4;
-            // 
-            // reportsDataSet4
-            // 
-            this.reportsDataSet4.DataSetName = "ReportsDataSet4";
-            this.reportsDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // uSERTableAdapter
             // 
@@ -419,21 +419,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.saveUsersBn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usresSettingsRGV.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usresSettingsRGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).EndInit();
             this.radPageViewPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.saveReportsBn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportSettingsRGV.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportSettingsRGV)).EndInit();
-            this.radPageViewPage3.ResumeLayout(false);
-            this.radPageViewPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.arhivePathTB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.archivePathBn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPathRTB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoPathBn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pathsSaveBn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEPORTTYPEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportsDataSet4)).EndInit();
+            this.radPageViewPage3.ResumeLayout(false);
+            this.radPageViewPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsSaveBn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPathBn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPathRTB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.archivePathBn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arhivePathTB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
