@@ -275,17 +275,15 @@ namespace Arhive2018.FORMS
 
         private void objectTB_Enter(object sender, EventArgs e)
         {
-            if (objectTB.ForeColor == Color.Gray)
+           /* if (objectTB.ForeColor == Color.Gray)
             {
                 objectTB.Clear();
                 objectTB.ForeColor = Color.Black;
-            }
-
+            }*/
         }
 
         private void numberUpDn_ValueChanged(object sender, EventArgs e)
         {
-
             if (radgridView1.Rows.Count >= numberUpDn.Value)
             {
                 GetPositionInfo(Convert.ToInt32(numberUpDn.Value));
@@ -312,7 +310,7 @@ namespace Arhive2018.FORMS
                 MessageBox.Show(ex.Message);
             }
         }
-
+        //LogOut
         private void logOUtLb_Click(object sender, EventArgs e)
         {
             var login = new Login();
@@ -331,9 +329,7 @@ namespace Arhive2018.FORMS
             }
             else
             {
-
-                QueryMachine.InsertRow( objectTB.Text, agreementNumberTB.Text, releaseDateDTP.Value, Convert.ToInt32(FioCB.SelectedValue), Convert.ToInt32(reportTypeCB.SelectedValue), quantityTB.Text, commentRTB.Text,out newId,_user.Id,DateTime.Now);
-                
+                QueryMachine.InsertRow( objectTB.Text, agreementNumberTB.Text, releaseDateDTP.Value, Convert.ToInt32(FioCB.SelectedValue), Convert.ToInt32(reportTypeCB.SelectedValue), quantityTB.Text, commentRTB.Text,out newId,_user.Id,DateTime.Now);               
             }
             if (filePathLb.Text != "путь:" && filePathLb.Text.EndsWith("pdf"))
             {
@@ -347,7 +343,7 @@ namespace Arhive2018.FORMS
             filePathLb.Text = "путь:";
             MessageBox.Show("Сохранено");
         }
-
+        //Удалить текущую запись
         private void DeleteBn_Click(object sender, EventArgs e)
         {
             if (radgridView1.CurrentRow != null && Convert.ToInt32(numberUpDn.Value) == Convert.ToInt32(radgridView1.CurrentRow.Cells[0].Value))
@@ -388,7 +384,7 @@ namespace Arhive2018.FORMS
             GridDataCellElement cell = element as GridDataCellElement; 
             if (cell == null && element != null)
             {
-                cell = element.FindAncestor<GridDataCellElement>();
+                cell = element.FindAncestor<GridDataCellElement>(); 
             }
             if (cell != null && (cell.ColumnInfo.Name == "VIEW" || cell.ColumnInfo.Name == "DOWNLOAD"))
             {
