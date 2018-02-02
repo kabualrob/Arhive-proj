@@ -179,9 +179,6 @@ namespace Arhive2018.FORMS
          }
         }
 
-
-
-
         private void UploadFileBn_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Portable Document Format|*.pdf";
@@ -194,22 +191,10 @@ namespace Arhive2018.FORMS
         {
             if (openFileDialog1.FileName.EndsWith(".pdf"))
             {
-              //  File.Copy(Path.Combine(openFileDialog1., openFileDialog1.FileName), Path.Combine(backupDir, fName), true);
-              //  var fileName = openFileDialog1.FileName;
-             //   System.IO.File.Copy(fileName, Path.Combine(Path.GetDirectoryName(fileName), Path.GetFileNameWithoutExtension(fileName) + ".txt"));
-                //System.IO.File.Copy(fileName, string.Format(@"{1}/{0}.pdf",radgridView1.CurrentRow.Cells[1].Value, Settings.Default.ArhivePath), true);
-
-              //  DialogResult result = MessageBox.Show(string.Format("Файл {0} успешно загружен", openFileDialog1.FileName), "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                filePathLb.Text = openFileDialog1.FileName;
-               // if (result == DialogResult.Yes)
-                {
-                 //   Transfer_Bn.Enabled = true;
-                }
-              //  UploadFileBn.Text = "Загружен";
+                 filePathLb.Text = openFileDialog1.FileName;
             }
             else MessageBox.Show(string.Format(@"Выбранный файл {0} не соответствует формату Pdf",openFileDialog1.FileName), @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
 
         private void exportToPdfBn_Click(object sender, EventArgs e)
         {
