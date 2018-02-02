@@ -301,7 +301,6 @@ namespace Arhive2018.FORMS
                     if (radgridView1.Rows.Count < numberUpDn.Value)
                     {
                         numberUpDn.Maximum = numberUpDn.Maximum - 1;
-                       // numberUpDn.Value = numberUpDn.Maximum;
                     }
                     int selectedIndex = radgridView1.SelectedRows[0].Index;
                     GetPositionInfo(selectedIndex+1);//получает информацию о выделенной строке в таблице (по умолчанию 1)
@@ -359,8 +358,6 @@ namespace Arhive2018.FORMS
                     this.aRHIVE_VIEWTableAdapter.Fill(this.aRHIVE1DataSet.ARHIVE_VIEW);
                     setRowNumbers();//устанавливает номера по порядку в таблице
                     numberUpDn.Maximum = radgridView1.Rows.Count;
-                  //  GetPositionInfo(Convert.ToInt32(numberUpDn.Value));
-                   // radgridView1.Rows[Convert.ToInt32(numberUpDn.Value) - 1].IsCurrent = true;
                 }
             }
             else
