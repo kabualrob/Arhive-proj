@@ -113,7 +113,6 @@ namespace Arhive2018.FORMS
                 if (!File.Exists(file))
                 {
                   //  this.SetStyle(e.CellElement);
-                    // cmdCell.Image = null;
                     e.CellElement.Image = imagesList1.Images[0];
                     //  e.CellElement.Image = new Bitmap(Arhive2018.Properties.Resources.close); ;
                 }
