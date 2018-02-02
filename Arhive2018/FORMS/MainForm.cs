@@ -385,7 +385,7 @@ namespace Arhive2018.FORMS
         private void radgridView1_MouseMove(object sender, MouseEventArgs e)
         {
             RadElement element = this.radgridView1.RootElement.ElementTree.GetElementAtPoint(e.Location);
-            GridDataCellElement cell = element as GridDataCellElement;
+            GridDataCellElement cell = element as GridDataCellElement; 
             if (cell == null && element != null)
             {
                 cell = element.FindAncestor<GridDataCellElement>();
