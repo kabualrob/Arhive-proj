@@ -179,36 +179,12 @@ namespace Arhive2018.FORMS
          }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            /* if (objectTB.Text.Length >= 3)
-                 objectTB.AutoCompleteCustomSource = QueryMachine.GetObjectInfo(objectTB.Text);
-             else
-                 objectTB.AutoCompleteCustomSource = null;
-                 */
-          /*  if (i == 0)
-            {
-                objectTB.Clear();
-                objectTB.ForeColor = Color.Black;
-                i++;
-                objectTB.Text = i.ToString();
-            }
-            else
-            {
-                return;
-            }
-            */
-        }
 
-        private void radMenu1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void UploadFileBn_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Portable Document Format|*.pdf";
-           // openFileDialog1.ShowHelp = true;
             openFileDialog1.FileName = "*.pdf";
             openFileDialog1.ShowDialog();
 

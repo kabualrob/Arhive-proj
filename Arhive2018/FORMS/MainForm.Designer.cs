@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn20 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn3 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn21 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn22 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn23 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn24 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewImageColumn gridViewImageColumn5 = new Telerik.WinControls.UI.GridViewImageColumn();
-            Telerik.WinControls.UI.GridViewImageColumn gridViewImageColumn6 = new Telerik.WinControls.UI.GridViewImageColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewImageColumn gridViewImageColumn1 = new Telerik.WinControls.UI.GridViewImageColumn();
+            Telerik.WinControls.UI.GridViewImageColumn gridViewImageColumn2 = new Telerik.WinControls.UI.GridViewImageColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.UserLb = new Telerik.WinControls.UI.RadLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
@@ -275,7 +275,6 @@
             this.objectTB.Name = "objectTB";
             this.objectTB.Size = new System.Drawing.Size(438, 20);
             this.objectTB.TabIndex = 9;
-            this.objectTB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.objectTB.Enter += new System.EventHandler(this.objectTB_Enter);
             // 
             // label3
@@ -432,83 +431,83 @@
             // 
             // 
             this.radgridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn17.EnableExpressionEditor = false;
-            gridViewTextBoxColumn17.HeaderText = "п/п";
-            gridViewTextBoxColumn17.Name = "Number";
-            gridViewTextBoxColumn18.DataType = typeof(int);
-            gridViewTextBoxColumn18.EnableExpressionEditor = false;
-            gridViewTextBoxColumn18.FieldName = "ID";
-            gridViewTextBoxColumn18.HeaderText = "ID";
-            gridViewTextBoxColumn18.Name = "ID";
-            gridViewTextBoxColumn18.Width = 47;
-            gridViewTextBoxColumn19.EnableExpressionEditor = false;
-            gridViewTextBoxColumn19.FieldName = "OBJECT";
-            gridViewTextBoxColumn19.HeaderText = "Объект (Город, Адрес, Наименование -(если есть))";
-            gridViewTextBoxColumn19.IsAutoGenerated = true;
-            gridViewTextBoxColumn19.Name = "OBJECT";
-            gridViewTextBoxColumn19.Width = 306;
-            gridViewTextBoxColumn20.EnableExpressionEditor = false;
-            gridViewTextBoxColumn20.FieldName = "AGREEMENT";
-            gridViewTextBoxColumn20.HeaderText = "№ Договора";
-            gridViewTextBoxColumn20.IsAutoGenerated = true;
-            gridViewTextBoxColumn20.Name = "AGREEMENT";
-            gridViewTextBoxColumn20.Width = 122;
-            gridViewDateTimeColumn3.DataType = typeof(string);
-            gridViewDateTimeColumn3.EnableExpressionEditor = false;
-            gridViewDateTimeColumn3.FieldName = "RELEASE_DATE";
-            gridViewDateTimeColumn3.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            gridViewDateTimeColumn3.FormatString = "{0:dd.MM.yyyy}";
-            gridViewDateTimeColumn3.HeaderText = "Дата выпуска";
-            gridViewDateTimeColumn3.IsAutoGenerated = true;
-            gridViewDateTimeColumn3.Name = "RELEASE_DATE";
-            gridViewDateTimeColumn3.Width = 79;
-            gridViewTextBoxColumn21.EnableExpressionEditor = false;
-            gridViewTextBoxColumn21.FieldName = "FIO";
-            gridViewTextBoxColumn21.HeaderText = "Ведущий";
-            gridViewTextBoxColumn21.IsAutoGenerated = true;
-            gridViewTextBoxColumn21.Name = "FIO";
-            gridViewTextBoxColumn21.Width = 106;
-            gridViewTextBoxColumn22.EnableExpressionEditor = false;
-            gridViewTextBoxColumn22.FieldName = "REPORT";
-            gridViewTextBoxColumn22.HeaderText = "Вид отчета";
-            gridViewTextBoxColumn22.IsAutoGenerated = true;
-            gridViewTextBoxColumn22.Name = "REPORT";
-            gridViewTextBoxColumn22.Width = 149;
-            gridViewTextBoxColumn23.EnableExpressionEditor = false;
-            gridViewTextBoxColumn23.FieldName = "QUANITY";
-            gridViewTextBoxColumn23.HeaderText = "Выпущено Кол. экз";
-            gridViewTextBoxColumn23.IsAutoGenerated = true;
-            gridViewTextBoxColumn23.Name = "QUANITY";
-            gridViewTextBoxColumn23.Width = 149;
-            gridViewTextBoxColumn24.EnableExpressionEditor = false;
-            gridViewTextBoxColumn24.FieldName = "COMMENT";
-            gridViewTextBoxColumn24.HeaderText = "Комментарий";
-            gridViewTextBoxColumn24.IsAutoGenerated = true;
-            gridViewTextBoxColumn24.Name = "COMMENT";
-            gridViewTextBoxColumn24.Width = 176;
-            gridViewImageColumn5.EnableExpressionEditor = false;
-            gridViewImageColumn5.HeaderText = "Просмотр";
-            gridViewImageColumn5.Name = "VIEW";
-            gridViewImageColumn5.Width = 83;
-            gridViewImageColumn6.EnableExpressionEditor = false;
-            gridViewImageColumn6.HeaderText = "Скачать";
-            gridViewImageColumn6.Name = "DOWNLOAD";
-            gridViewImageColumn6.Width = 66;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.HeaderText = "п/п";
+            gridViewTextBoxColumn1.Name = "Number";
+            gridViewTextBoxColumn2.DataType = typeof(int);
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "ID";
+            gridViewTextBoxColumn2.HeaderText = "ID";
+            gridViewTextBoxColumn2.Name = "ID";
+            gridViewTextBoxColumn2.Width = 47;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "OBJECT";
+            gridViewTextBoxColumn3.HeaderText = "Объект (Город, Адрес, Наименование -(если есть))";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "OBJECT";
+            gridViewTextBoxColumn3.Width = 306;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "AGREEMENT";
+            gridViewTextBoxColumn4.HeaderText = "№ Договора";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "AGREEMENT";
+            gridViewTextBoxColumn4.Width = 122;
+            gridViewDateTimeColumn1.DataType = typeof(string);
+            gridViewDateTimeColumn1.EnableExpressionEditor = false;
+            gridViewDateTimeColumn1.FieldName = "RELEASE_DATE";
+            gridViewDateTimeColumn1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            gridViewDateTimeColumn1.FormatString = "{0:dd.MM.yyyy}";
+            gridViewDateTimeColumn1.HeaderText = "Дата выпуска";
+            gridViewDateTimeColumn1.IsAutoGenerated = true;
+            gridViewDateTimeColumn1.Name = "RELEASE_DATE";
+            gridViewDateTimeColumn1.Width = 79;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "FIO";
+            gridViewTextBoxColumn5.HeaderText = "Ведущий";
+            gridViewTextBoxColumn5.IsAutoGenerated = true;
+            gridViewTextBoxColumn5.Name = "FIO";
+            gridViewTextBoxColumn5.Width = 106;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "REPORT";
+            gridViewTextBoxColumn6.HeaderText = "Вид отчета";
+            gridViewTextBoxColumn6.IsAutoGenerated = true;
+            gridViewTextBoxColumn6.Name = "REPORT";
+            gridViewTextBoxColumn6.Width = 149;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "QUANITY";
+            gridViewTextBoxColumn7.HeaderText = "Выпущено Кол. экз";
+            gridViewTextBoxColumn7.IsAutoGenerated = true;
+            gridViewTextBoxColumn7.Name = "QUANITY";
+            gridViewTextBoxColumn7.Width = 149;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "COMMENT";
+            gridViewTextBoxColumn8.HeaderText = "Комментарий";
+            gridViewTextBoxColumn8.IsAutoGenerated = true;
+            gridViewTextBoxColumn8.Name = "COMMENT";
+            gridViewTextBoxColumn8.Width = 176;
+            gridViewImageColumn1.EnableExpressionEditor = false;
+            gridViewImageColumn1.HeaderText = "Просмотр";
+            gridViewImageColumn1.Name = "VIEW";
+            gridViewImageColumn1.Width = 83;
+            gridViewImageColumn2.EnableExpressionEditor = false;
+            gridViewImageColumn2.HeaderText = "Скачать";
+            gridViewImageColumn2.Name = "DOWNLOAD";
+            gridViewImageColumn2.Width = 66;
             this.radgridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn17,
-            gridViewTextBoxColumn18,
-            gridViewTextBoxColumn19,
-            gridViewTextBoxColumn20,
-            gridViewDateTimeColumn3,
-            gridViewTextBoxColumn21,
-            gridViewTextBoxColumn22,
-            gridViewTextBoxColumn23,
-            gridViewTextBoxColumn24,
-            gridViewImageColumn5,
-            gridViewImageColumn6});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewDateTimeColumn1,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewImageColumn1,
+            gridViewImageColumn2});
             this.radgridView1.MasterTemplate.DataSource = this.aRHIVEVIEWBindingSource;
             this.radgridView1.MasterTemplate.EnableFiltering = true;
-            this.radgridView1.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.radgridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radgridView1.Name = "radgridView1";
             this.radgridView1.ReadOnly = true;
             this.radgridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
