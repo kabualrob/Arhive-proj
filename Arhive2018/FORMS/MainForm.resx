@@ -203,7 +203,7 @@
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1171, 17</value>
   </metadata>
-  <data name="radMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ShowRecordRMI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAUFSURBVEhLnZV7TJNnGMU/5v7YnHNjXjPnNFOju+hmFIrOzMWpuJuT6LaoHTenRDBMFImI0wki
@@ -230,7 +230,7 @@
         5asJKee96Kv/J350gldWYcUHPwnFsw6fSHtCGMP8A379CJ4nuMMFAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="radMenuItem2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="exportToExcelRMI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAdVSURBVEhLjVVpUJRXFm10yonOaFUsJDMBHZfEAUQUZQlqEjAQQZE9RCQO4MKmCOICOAEasIFm
@@ -267,7 +267,7 @@
         R47IykpISOzctm3bZhGRDw/tnwWJ9H++s8a/pmon3QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="radMenuItem3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="exportToPdfRMI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAOsSURBVEhLrVZdaBRXGF19iQ1UH4KvIpZaoS2U5KHgQx8EX33wTRGKpAb1wZcIpSXkwbGmpvnb
@@ -289,7 +289,7 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="radMenuItem4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SettingsRMI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAVPSURBVEhLpVYLTJNXFL5/Sx9AKbTQdkyMOBkQF8A5Ka34iNOpuFFEE3VTpo3go4DGsAkTdEGM
@@ -318,7 +318,7 @@
         RK5CYII=
 </value>
   </data>
-  <data name="radMenuItem5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="NewRecordRMI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAhuSURBVFhH7Zd5UNNnGseBqvVone6O3W5d63ame3Xs7rajW11ndta6Hatdadd6VJGioHKKQomy

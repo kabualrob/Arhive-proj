@@ -75,11 +75,11 @@
             this.aRHIVEVIEWBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aRHIVE1DataSet = new Arhive2018.ARHIVE1DataSet();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
+            this.ShowRecordRMI = new Telerik.WinControls.UI.RadMenuItem();
+            this.exportToExcelRMI = new Telerik.WinControls.UI.RadMenuItem();
+            this.exportToPdfRMI = new Telerik.WinControls.UI.RadMenuItem();
+            this.SettingsRMI = new Telerik.WinControls.UI.RadMenuItem();
+            this.NewRecordRMI = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             this.logOUtLb = new System.Windows.Forms.Label();
             this.aRHIVE_VIEWTableAdapter = new Arhive2018.ARHIVE1DataSetTableAdapters.ARHIVE_VIEWTableAdapter();
@@ -537,54 +537,54 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // radMenuItem1
+            // ShowRecordRMI
             // 
-            this.radMenuItem1.HintText = "";
-            this.radMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("radMenuItem1.Image")));
-            this.radMenuItem1.Name = "radMenuItem1";
-            this.radMenuItem1.Text = "Просмотреть запись";
-            this.radMenuItem1.ToolTipText = "Посмотреть/создать запись";
-            this.radMenuItem1.Click += new System.EventHandler(this.radMenuItem1_Click);
+            this.ShowRecordRMI.HintText = "";
+            this.ShowRecordRMI.Image = ((System.Drawing.Image)(resources.GetObject("ShowRecordRMI.Image")));
+            this.ShowRecordRMI.Name = "ShowRecordRMI";
+            this.ShowRecordRMI.Text = "Просмотреть запись";
+            this.ShowRecordRMI.ToolTipText = "Посмотреть/создать запись";
+            this.ShowRecordRMI.Click += new System.EventHandler(this.ShowRecordRMI_Click);
             // 
-            // radMenuItem2
+            // exportToExcelRMI
             // 
-            this.radMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("radMenuItem2.Image")));
-            this.radMenuItem2.Name = "radMenuItem2";
-            this.radMenuItem2.Text = "Экспорт в Excel";
-            this.radMenuItem2.Click += new System.EventHandler(this.exportToExcelBn_Click);
+            this.exportToExcelRMI.Image = ((System.Drawing.Image)(resources.GetObject("exportToExcelRMI.Image")));
+            this.exportToExcelRMI.Name = "exportToExcelRMI";
+            this.exportToExcelRMI.Text = "Экспорт в Excel";
+            this.exportToExcelRMI.Click += new System.EventHandler(this.exportToExcelBn_Click);
             // 
-            // radMenuItem3
+            // exportToPdfRMI
             // 
-            this.radMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("radMenuItem3.Image")));
-            this.radMenuItem3.Name = "radMenuItem3";
-            this.radMenuItem3.Text = "Экспорт в Pdf";
-            this.radMenuItem3.Click += new System.EventHandler(this.exportToPdfBn_Click);
+            this.exportToPdfRMI.Image = ((System.Drawing.Image)(resources.GetObject("exportToPdfRMI.Image")));
+            this.exportToPdfRMI.Name = "exportToPdfRMI";
+            this.exportToPdfRMI.Text = "Экспорт в Pdf";
+            this.exportToPdfRMI.Click += new System.EventHandler(this.exportToPdfBn_Click);
             // 
-            // radMenuItem4
+            // SettingsRMI
             // 
-            this.radMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("radMenuItem4.Image")));
-            this.radMenuItem4.Name = "radMenuItem4";
-            this.radMenuItem4.Text = "Настройки";
-            this.radMenuItem4.ToolTipText = "Настройки системы";
-            this.radMenuItem4.Click += new System.EventHandler(this.radMenuItem4_Click);
+            this.SettingsRMI.Image = ((System.Drawing.Image)(resources.GetObject("SettingsRMI.Image")));
+            this.SettingsRMI.Name = "SettingsRMI";
+            this.SettingsRMI.Text = "Настройки";
+            this.SettingsRMI.ToolTipText = "Настройки системы";
+            this.SettingsRMI.Click += new System.EventHandler(this.SettingsRMI_Click);
             // 
-            // radMenuItem5
+            // NewRecordRMI
             // 
-            this.radMenuItem5.Image = ((System.Drawing.Image)(resources.GetObject("radMenuItem5.Image")));
-            this.radMenuItem5.Name = "radMenuItem5";
-            this.radMenuItem5.Text = "Новая запись";
-            this.radMenuItem5.Click += new System.EventHandler(this.radMenuItem5_Click);
+            this.NewRecordRMI.Image = ((System.Drawing.Image)(resources.GetObject("NewRecordRMI.Image")));
+            this.NewRecordRMI.Name = "NewRecordRMI";
+            this.NewRecordRMI.Text = "Новая запись";
+            this.NewRecordRMI.Click += new System.EventHandler(this.NewRecordRMI_Click);
             // 
             // radMenu1
             // 
             this.radMenu1.Controls.Add(this.logOUtLb);
             this.radMenu1.Controls.Add(this.UserLb);
             this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radMenuItem1,
-            this.radMenuItem5,
-            this.radMenuItem4,
-            this.radMenuItem2,
-            this.radMenuItem3});
+            this.ShowRecordRMI,
+            this.NewRecordRMI,
+            this.SettingsRMI,
+            this.exportToExcelRMI,
+            this.exportToPdfRMI});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
             this.radMenu1.Size = new System.Drawing.Size(1381, 36);
@@ -687,13 +687,13 @@
         private Telerik.WinControls.UI.RadButton UploadFileBn;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label9;
-        private Telerik.WinControls.UI.RadMenuItem radMenuItem1;
-        private Telerik.WinControls.UI.RadMenuItem radMenuItem2;
-        private Telerik.WinControls.UI.RadMenuItem radMenuItem3;
-        private Telerik.WinControls.UI.RadMenuItem radMenuItem4;
+        private Telerik.WinControls.UI.RadMenuItem ShowRecordRMI;
+        private Telerik.WinControls.UI.RadMenuItem exportToExcelRMI;
+        private Telerik.WinControls.UI.RadMenuItem exportToPdfRMI;
+        private Telerik.WinControls.UI.RadMenuItem SettingsRMI;
         private Telerik.WinControls.UI.RadMenu radMenu1;
         private System.Windows.Forms.Label label10;
-        private Telerik.WinControls.UI.RadMenuItem radMenuItem5;
+        private Telerik.WinControls.UI.RadMenuItem NewRecordRMI;
         private System.Windows.Forms.NumericUpDown numberUpDn;
         private ARHIVE1DataSet2 aRHIVE1DataSet2;
         private System.Windows.Forms.BindingSource uSERBindingSource;

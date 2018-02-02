@@ -272,51 +272,6 @@ namespace Arhive2018.FORMS
             radgridView1.Columns["DOWNLOAD"].IsVisible = true;
         }
 
-        private void radMenuItem1_Click(object sender, EventArgs e)
-        {
-            if (radGroupBox1.Visible==true)
-            {
-                splitContainer1.SplitterDistance = 0;
-                radGroupBox1.Visible = false;
-            }
-            else
-            {
-                splitContainer1.SplitterDistance = 130;
-                radGroupBox1.Visible = true;
-            }
-        }
-
-        private void radMenuItem4_Click(object sender, EventArgs e)
-        {
-            var settings = new UserSettings(this);
-            settings.Show();
-        }
-
-        private void radMenuItem5_Click(object sender, EventArgs e)
-        {            
-            if (radGroupBox1.Visible == false)
-            {
-                splitContainer1.SplitterDistance = 130;
-                radGroupBox1.Visible = true;
-            }
-            objectTB.Text = "";
-           agreementNumberTB.Text = "";
-            releaseDateDTP.Value = DateTime.Now;
-            FioCB.SelectedIndex = -1;
-            reportTypeCB.SelectedIndex = -1;
-            quantityTB.Text = "";
-            commentRTB.Text = "";
-            UploadFileBn.Text = "Загрузить";
-            radgridView1.CurrentRow = null;
-            // numberUpDn.Value = 1;
-            if (radgridView1.Rows.Count == numberUpDn.Maximum)
-            {
-                numberUpDn.Maximum = numberUpDn.Maximum + 1;
-                numberUpDn.Value = numberUpDn.Maximum;
-            }
-
-        }
-
         private void objectTB_Enter(object sender, EventArgs e)
         {
             if (objectTB.ForeColor == Color.Gray)
@@ -464,7 +419,49 @@ namespace Arhive2018.FORMS
                 }
             }
         }
-
+        //создать новую запись
+        private void NewRecordRMI_Click(object sender, EventArgs e)
+        {
+            if (radGroupBox1.Visible == false)
+            {
+                splitContainer1.SplitterDistance = 130;
+                radGroupBox1.Visible = true;
+            }
+            objectTB.Text = "";
+            agreementNumberTB.Text = "";
+            releaseDateDTP.Value = DateTime.Now;
+            FioCB.SelectedIndex = -1;
+            reportTypeCB.SelectedIndex = -1;
+            quantityTB.Text = "";
+            commentRTB.Text = "";
+            UploadFileBn.Text = "Загрузить";
+            radgridView1.CurrentRow = null;
+            if (radgridView1.Rows.Count == numberUpDn.Maximum)
+            {
+                numberUpDn.Maximum = numberUpDn.Maximum + 1;
+                numberUpDn.Value = numberUpDn.Maximum;
+            }
+        }
+        //просмотреть запись
+        private void ShowRecordRMI_Click(object sender, EventArgs e)
+        {
+            if (radGroupBox1.Visible == true)
+            {
+                splitContainer1.SplitterDistance = 0;
+                radGroupBox1.Visible = false;
+            }
+            else
+            {
+                splitContainer1.SplitterDistance = 130;
+                radGroupBox1.Visible = true;
+            }
+        }
+        //Настройки
+        private void SettingsRMI_Click(object sender, EventArgs e)
+        {
+            var settings = new UserSettings(this);
+            settings.Show();
+        }
 
         /* void spreadExporter_CellFormatting(object sender, Telerik.WinControls.Export.CellFormattingEventArgs e)
 {
