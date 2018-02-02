@@ -308,7 +308,6 @@ namespace Arhive2018.FORMS
             commentRTB.Text = "";
             UploadFileBn.Text = "Загрузить";
             radgridView1.CurrentRow = null;
-            // numberUpDn.Value = 1;
             if (radgridView1.Rows.Count == numberUpDn.Maximum)
             {
                 numberUpDn.Maximum = numberUpDn.Maximum + 1;
