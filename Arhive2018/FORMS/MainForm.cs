@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -16,6 +17,7 @@ using Telerik.WinControls;
 using Telerik.WinControls.Export;
 using Telerik.WinControls.UI;
 using Telerik.WinControls.UI.Export;
+
 
 namespace Arhive2018.FORMS
 {
@@ -152,14 +154,16 @@ namespace Arhive2018.FORMS
             { 
             if (e.Column != null && e.Column.Name == "VIEW")
             {
-                var file = string.Format(@"{1}\{0}.pdf", radgridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), Settings.Default.ArhivePath);
+                    var dir = string.Format(@"{1}\{0}\", radgridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), Settings.Default.ArhivePath);
+                    openInExplorer(dir);
+               /* var file = string.Format(@"{1}\{0}.pdf", radgridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), Settings.Default.ArhivePath);
                 if (File.Exists(file))
                 {
                     Form frm = new View(radgridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
                     frm.Show();
                 }
                 else MessageBox.Show((string.Format("Файл {0} не найден!", file)), "Предупреждение", MessageBoxButtons.OK);
-
+                */
             }
             else if (e.Column != null && e.Column.Name == "DOWNLOAD")
             {
@@ -187,7 +191,11 @@ namespace Arhive2018.FORMS
             }
          }
         }
-
+        static void openInExplorer(string path)
+        {
+            Process.Start(path);
+        }
+ 
         private void UploadFileBn_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Portable Document Format|*.pdf";
@@ -585,8 +593,11 @@ namespace Arhive2018.FORMS
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Form frm = new View(radgridView1.CurrentRow.Cells[1].Value.ToString());
+            if (listView1.SelectedItems.Count == 1)
+            { 
+            Form frm = new View(listView1.SelectedItems[0].Text);
             frm.Show();
+        }
         }
 
         /* void spreadExporter_CellFormatting(object sender, Telerik.WinControls.Export.CellFormattingEventArgs e)
