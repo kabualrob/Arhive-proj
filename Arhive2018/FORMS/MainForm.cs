@@ -80,13 +80,23 @@ namespace Arhive2018.FORMS
                 else reportTypeCB.SelectedIndex = -1;
                 quantityTB.Text = radgridView1.Rows[position - 1].Cells[7].Value.ToString();
                 commentRTB.Text = radgridView1.Rows[position - 1].Cells[8].Value.ToString();
-                string path = string.Format(@"{1}\{0}.pdf", radgridView1.Rows[position - 1].Cells[1].Value.ToString(), Settings.Default.ArhivePath);
-                if (File.Exists(path))
+                string directory = string.Format(@"{1}\{0}", radgridView1.Rows[position - 1].Cells[1].Value.ToString(), Settings.Default.ArhivePath);
+                bool exists = System.IO.Directory.Exists(directory);
+                listView1.Items.Clear();
+                if (exists)
+                {
+                  //  var files = Directory.GetFiles(directory);
+                    foreach (var file in Directory.GetFiles(directory))
+                    {
+                        listView1.Items.Add(file);
+                    }
+                }
+                 /*   if (File.Exists(path))
                 {
                     UploadFileBn.Text = "Загружен";
                 }
                 else
-                    UploadFileBn.Text = "Загрузить";
+                    UploadFileBn.Text = "Загрузить";*/
             }
         }
 
@@ -182,18 +192,35 @@ namespace Arhive2018.FORMS
         {
             openFileDialog1.Filter = "Portable Document Format|*.pdf";
             openFileDialog1.FileName = "*.pdf";
+            openFileDialog1.Multiselect = true;
             openFileDialog1.ShowDialog();
 
         }
         //выбор файла pdf
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            if (openFileDialog1.FileName.EndsWith(".pdf"))
+            foreach (String file in openFileDialog1.FileNames)
+            {
+                // Create a PictureBox.
+                try
+                {
+                    listView1.Items.Add(file);
+                    // this.radListView1.Items.Add("Item 2");
+                }
+                catch (Exception ex)
+                {
+                    // Could not load the image - probably related to Windows file system permissions.
+                    MessageBox.Show("Cannot display the image: " + file.Substring(file.LastIndexOf('\\'))
+                        + ". You may not have permission to read the file, or " +
+                        "it may be corrupt.\n\nReported error: " + ex.Message);
+                }
+            }
+           /* if (openFileDialog1.FileName.EndsWith(".pdf"))
             {
                  filePathLb.Text = openFileDialog1.FileName;
             }
             else MessageBox.Show(string.Format(@"Выбранный файл {0} не соответствует формату Pdf",openFileDialog1.FileName), @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+       */ }
         //экспорт архива в pdf
         private void exportToPdfBn_Click(object sender, EventArgs e)
         {
@@ -323,13 +350,16 @@ namespace Arhive2018.FORMS
             int newId = 0;
             if (radgridView1.CurrentRow!=null && Convert.ToInt32(numberUpDn.Value) == Convert.ToInt32(radgridView1.CurrentRow.Cells[0].Value))
             {
-                newId =Convert.ToInt32(numberUpDn.Value);
-                QueryMachine.UpdateRow(Convert.ToInt32(radgridView1.CurrentRow.Cells[1].Value), objectTB.Text, agreementNumberTB.Text, releaseDateDTP.Value, Convert.ToInt32(FioCB.SelectedValue), Convert.ToInt32(reportTypeCB.SelectedValue), quantityTB.Text, commentRTB.Text);               
+               // newId =Convert.ToInt32(numberUpDn.Value);
+                QueryMachine.UpdateRow(Convert.ToInt32(radgridView1.CurrentRow.Cells[1].Value), objectTB.Text, agreementNumberTB.Text, releaseDateDTP.Value, Convert.ToInt32(FioCB.SelectedValue), Convert.ToInt32(reportTypeCB.SelectedValue), quantityTB.Text, commentRTB.Text);
+                CreateFileDirectory(numberUpDn.Value.ToString());
             }
             else
             {
-                QueryMachine.InsertRow( objectTB.Text, agreementNumberTB.Text, releaseDateDTP.Value, Convert.ToInt32(FioCB.SelectedValue), Convert.ToInt32(reportTypeCB.SelectedValue), quantityTB.Text, commentRTB.Text,out newId,_user.Id,DateTime.Now);               
+                QueryMachine.InsertRow( objectTB.Text, agreementNumberTB.Text, releaseDateDTP.Value, Convert.ToInt32(FioCB.SelectedValue), Convert.ToInt32(reportTypeCB.SelectedValue), quantityTB.Text, commentRTB.Text,out newId,_user.Id,DateTime.Now);
+                CreateFileDirectory(newId.ToString());
             }
+            
             if (filePathLb.Text != "путь:" && filePathLb.Text.EndsWith("pdf"))
             {
                 System.IO.File.Copy(filePathLb.Text, string.Format(@"{1}/{0}.pdf", newId, Settings.Default.ArhivePath), true);
@@ -342,6 +372,73 @@ namespace Arhive2018.FORMS
             filePathLb.Text = "путь:";
             MessageBox.Show("Сохранено");
         }
+
+        private void CreateFileDirectory(string folder)
+        {
+            var directory = string.Format(@"{0}\{1}", Settings.Default.ArhivePath, folder);
+            bool exists = System.IO.Directory.Exists(directory);
+
+            if (!exists)
+            {
+                System.IO.Directory.CreateDirectory(directory);
+            }
+            else
+            {
+               // ClearDirectory(directory);
+            }
+            foreach (ListViewItem item in listView1.Items)
+            {
+                string file = ((System.Windows.Forms.ListViewItem)item).Text;
+                if (!file.StartsWith(directory))
+                {
+                    CopyFileToArhive(directory, file);
+                    listView1.Items.Remove(item);
+                    listView1.Items.Add(string.Format(@"{0}\{1}", directory, Path.GetFileName(file)));
+                }
+            }
+            deleteFilesFromArhive(directory);
+          //  CopyFilesToArhive(directory);
+        }
+
+        private void deleteFilesFromArhive(string directory)
+        {
+            //var files = Directory.GetFiles(directory);
+            foreach (var file in Directory.GetFiles(directory))
+            {
+                // if(file)
+                var existItem = listView1.FindItemWithText(file);
+                 if (existItem==null)
+                {
+                    File.Delete(file);
+                    //copy item
+                }
+            }
+            foreach (ListViewItem item in listView1.Items)
+            {
+
+            }
+        }
+
+        private void CopyFileToArhive(string directory,string file)
+        {
+            System.IO.File.Copy(file, string.Format(@"{0}\{1}",directory, Path.GetFileName(file)), true);
+        }
+
+        private void ClearDirectory(string directory)
+        {
+            System.IO.DirectoryInfo di = new DirectoryInfo(directory);
+
+            foreach (FileInfo file in di.GetFiles())
+            {
+                file.Delete();
+            }
+           /* foreach (DirectoryInfo dir in di.GetDirectories())
+            {
+                dir.Delete(true);
+            }*/
+        }
+
+
         //Удалить текущую запись
         private void DeleteBn_Click(object sender, EventArgs e)
         {
@@ -420,6 +517,7 @@ namespace Arhive2018.FORMS
             commentRTB.Text = "";
             UploadFileBn.Text = "Загрузить";
             radgridView1.CurrentRow = null;
+            listView1.Items.Clear();
             if (radgridView1.Rows.Count == numberUpDn.Maximum)
             {
                 numberUpDn.Maximum = numberUpDn.Maximum + 1;
@@ -445,6 +543,50 @@ namespace Arhive2018.FORMS
         {
             var settings = new UserSettings(this);
             settings.Show();
+        }
+
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                 if (listView1.FocusedItem.Bounds.Contains(e.Location) == true)
+                {
+                       contextMenuStrip1.Show(Cursor.Position);
+                }
+            }
+        }
+
+        private void radGroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+           if(e.ClickedItem.Text == "Удалить текущий")
+            {
+                foreach (ListViewItem eachItem in listView1.SelectedItems)
+                {
+                    listView1.Items.Remove(eachItem);
+                }
+               // listView1.Items.Remove(listView1.SelectedItems);
+            }
+            if (e.ClickedItem.Text == "Удалить все")
+            {
+                listView1.Items.Clear();
+             }
+            contextMenuStrip1.Refresh();
+        }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Form frm = new View(radgridView1.CurrentRow.Cells[1].Value.ToString());
+            frm.Show();
         }
 
         /* void spreadExporter_CellFormatting(object sender, Telerik.WinControls.Export.CellFormattingEventArgs e)

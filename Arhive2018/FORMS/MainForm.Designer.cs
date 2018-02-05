@@ -45,6 +45,7 @@
             this.UserLb = new Telerik.WinControls.UI.RadLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.filePathLb = new System.Windows.Forms.Label();
             this.numberUpDn = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
@@ -87,6 +88,9 @@
             this.rEPORT_TYPETableAdapter = new Arhive2018.ARHIVE1DataSet3TableAdapters.REPORT_TYPETableAdapter();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьВсеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.UserLb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -109,6 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.aRHIVE1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             this.radMenu1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,6 +152,7 @@
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.radGroupBox1.Controls.Add(this.listView1);
             this.radGroupBox1.Controls.Add(this.filePathLb);
             this.radGroupBox1.Controls.Add(this.numberUpDn);
             this.radGroupBox1.Controls.Add(this.label10);
@@ -175,11 +181,23 @@
             this.radGroupBox1.Size = new System.Drawing.Size(1333, 119);
             this.radGroupBox1.TabIndex = 22;
             this.radGroupBox1.Text = "Редактирование записи";
+            this.radGroupBox1.Click += new System.EventHandler(this.radGroupBox1_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(993, 14);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(198, 97);
+            this.listView1.TabIndex = 29;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Tile;
+            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
+            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
             // 
             // filePathLb
             // 
             this.filePathLb.AutoSize = true;
-            this.filePathLb.Location = new System.Drawing.Point(566, 97);
+            this.filePathLb.Location = new System.Drawing.Point(69, 101);
             this.filePathLb.Name = "filePathLb";
             this.filePathLb.Size = new System.Drawing.Size(33, 13);
             this.filePathLb.TabIndex = 27;
@@ -215,7 +233,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(764, 69);
+            this.label9.Location = new System.Drawing.Point(741, 68);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 13);
             this.label9.TabIndex = 23;
@@ -226,7 +244,7 @@
             this.UploadFileBn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UploadFileBn.Image = global::Arhive2018.Properties.Resources.upload;
             this.UploadFileBn.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.UploadFileBn.Location = new System.Drawing.Point(608, 60);
+            this.UploadFileBn.Location = new System.Drawing.Point(1207, 54);
             this.UploadFileBn.Name = "UploadFileBn";
             this.UploadFileBn.Size = new System.Drawing.Size(123, 29);
             this.UploadFileBn.TabIndex = 22;
@@ -248,7 +266,7 @@
             this.DeleteBn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeleteBn.Image = ((System.Drawing.Image)(resources.GetObject("DeleteBn.Image")));
             this.DeleteBn.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.DeleteBn.Location = new System.Drawing.Point(1220, 59);
+            this.DeleteBn.Location = new System.Drawing.Point(1219, 14);
             this.DeleteBn.Name = "DeleteBn";
             this.DeleteBn.Size = new System.Drawing.Size(109, 31);
             this.DeleteBn.TabIndex = 20;
@@ -261,7 +279,7 @@
             this.saveRecordBn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saveRecordBn.Image = ((System.Drawing.Image)(resources.GetObject("saveRecordBn.Image")));
             this.saveRecordBn.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.saveRecordBn.Location = new System.Drawing.Point(1046, 61);
+            this.saveRecordBn.Location = new System.Drawing.Point(1197, 88);
             this.saveRecordBn.Name = "saveRecordBn";
             this.saveRecordBn.Size = new System.Drawing.Size(136, 31);
             this.saveRecordBn.TabIndex = 21;
@@ -273,14 +291,14 @@
             // 
             this.objectTB.Location = new System.Drawing.Point(134, 22);
             this.objectTB.Name = "objectTB";
-            this.objectTB.Size = new System.Drawing.Size(438, 20);
+            this.objectTB.Size = new System.Drawing.Size(405, 20);
             this.objectTB.TabIndex = 9;
             this.objectTB.Enter += new System.EventHandler(this.objectTB_Enter);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(580, 24);
+            this.label3.Location = new System.Drawing.Point(541, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 10;
@@ -289,7 +307,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(835, 25);
+            this.label4.Location = new System.Drawing.Point(776, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 10;
@@ -297,7 +315,7 @@
             // 
             // commentRTB
             // 
-            this.commentRTB.Location = new System.Drawing.Point(857, 49);
+            this.commentRTB.Location = new System.Drawing.Point(828, 62);
             this.commentRTB.Name = "commentRTB";
             this.commentRTB.Size = new System.Drawing.Size(159, 48);
             this.commentRTB.TabIndex = 18;
@@ -306,7 +324,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(566, 71);
+            this.label8.Location = new System.Drawing.Point(6, 101);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 13);
             this.label8.TabIndex = 10;
@@ -315,7 +333,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(162, 45);
+            this.label1.Location = new System.Drawing.Point(205, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 13);
             this.label1.TabIndex = 10;
@@ -328,9 +346,9 @@
             this.reportTypeCB.DataSource = this.rEPORTTYPEBindingSource;
             this.reportTypeCB.DisplayMember = "REPORT";
             this.reportTypeCB.FormattingEnabled = true;
-            this.reportTypeCB.Location = new System.Drawing.Point(91, 67);
+            this.reportTypeCB.Location = new System.Drawing.Point(304, 69);
             this.reportTypeCB.Name = "reportTypeCB";
-            this.reportTypeCB.Size = new System.Drawing.Size(198, 21);
+            this.reportTypeCB.Size = new System.Drawing.Size(169, 21);
             this.reportTypeCB.TabIndex = 15;
             this.reportTypeCB.ValueMember = "ID";
             // 
@@ -346,9 +364,9 @@
             // 
             // releaseDateDTP
             // 
-            this.releaseDateDTP.Location = new System.Drawing.Point(922, 22);
+            this.releaseDateDTP.Location = new System.Drawing.Point(860, 24);
             this.releaseDateDTP.Name = "releaseDateDTP";
-            this.releaseDateDTP.Size = new System.Drawing.Size(164, 20);
+            this.releaseDateDTP.Size = new System.Drawing.Size(119, 20);
             this.releaseDateDTP.TabIndex = 17;
             this.releaseDateDTP.TabStop = false;
             this.releaseDateDTP.Text = "17 января 2018 г.";
@@ -361,7 +379,7 @@
             this.FioCB.DataSource = this.uSERBindingSource;
             this.FioCB.DisplayMember = "FIO";
             this.FioCB.FormattingEnabled = true;
-            this.FioCB.Location = new System.Drawing.Point(1154, 17);
+            this.FioCB.Location = new System.Drawing.Point(59, 69);
             this.FioCB.Name = "FioCB";
             this.FioCB.Size = new System.Drawing.Size(166, 21);
             this.FioCB.TabIndex = 14;
@@ -379,14 +397,14 @@
             // 
             // agreementNumberTB
             // 
-            this.agreementNumberTB.Location = new System.Drawing.Point(675, 21);
+            this.agreementNumberTB.Location = new System.Drawing.Point(625, 25);
             this.agreementNumberTB.Name = "agreementNumberTB";
             this.agreementNumberTB.Size = new System.Drawing.Size(151, 20);
             this.agreementNumberTB.TabIndex = 11;
             // 
             // quantityTB
             // 
-            this.quantityTB.Location = new System.Drawing.Point(412, 67);
+            this.quantityTB.Location = new System.Drawing.Point(596, 70);
             this.quantityTB.Name = "quantityTB";
             this.quantityTB.Size = new System.Drawing.Size(136, 20);
             this.quantityTB.TabIndex = 13;
@@ -394,7 +412,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1099, 23);
+            this.label5.Location = new System.Drawing.Point(4, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 10;
@@ -403,7 +421,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 72);
+            this.label6.Location = new System.Drawing.Point(229, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 10;
@@ -412,7 +430,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(300, 73);
+            this.label7.Location = new System.Drawing.Point(484, 76);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 13);
             this.label7.TabIndex = 10;
@@ -533,6 +551,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Multiselect = true;
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // ShowRecordRMI
@@ -614,6 +633,29 @@
             // 
             this.rEPORT_TYPETableAdapter.ClearBeforeFill = true;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.удалитьВсеToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 48);
+            this.contextMenuStrip1.Text = "Удалить";
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(169, 22);
+            this.toolStripMenuItem2.Text = "Удалить текущий";
+            // 
+            // удалитьВсеToolStripMenuItem
+            // 
+            this.удалитьВсеToolStripMenuItem.Name = "удалитьВсеToolStripMenuItem";
+            this.удалитьВсеToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.удалитьВсеToolStripMenuItem.Text = "Удалить все";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -653,6 +695,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
             this.radMenu1.ResumeLayout(false);
             this.radMenu1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -705,5 +748,9 @@
         private ARHIVE1DataSet3TableAdapters.REPORT_TYPETableAdapter rEPORT_TYPETableAdapter;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         public System.Windows.Forms.ComboBox FioCB;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem удалитьВсеToolStripMenuItem;
     }
 }
