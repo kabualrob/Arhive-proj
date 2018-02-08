@@ -198,8 +198,8 @@ namespace Arhive2018.FORMS
  
         private void UploadFileBn_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "Portable Document Format|*.pdf";
-            openFileDialog1.FileName = "*.pdf";
+          //  openFileDialog1.Filter = "Portable Document Format|*.pdf";
+          //  openFileDialog1.FileName = "*.pdf";
             openFileDialog1.Multiselect = true;
             openFileDialog1.ShowDialog();
 
@@ -218,9 +218,9 @@ namespace Arhive2018.FORMS
                 catch (Exception ex)
                 {
                     // Could not load the image - probably related to Windows file system permissions.
-                    MessageBox.Show("Cannot display the image: " + file.Substring(file.LastIndexOf('\\'))
-                        + ". You may not have permission to read the file, or " +
-                        "it may be corrupt.\n\nReported error: " + ex.Message);
+                    MessageBox.Show("Невозможно добавить файл: " + file.Substring(file.LastIndexOf('\\'))
+                        + ". Возможно у вас нет прав доступа, или " +
+                        "файл может быть поврежден.\n\n Ошибка: " + ex.Message);
                 }
             }
            /* if (openFileDialog1.FileName.EndsWith(".pdf"))

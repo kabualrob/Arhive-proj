@@ -32,10 +32,12 @@
             this.radPdfViewer1 = new Telerik.WinControls.UI.RadPdfViewer();
             this.radPdfViewerNavigator1 = new Telerik.WinControls.UI.RadPdfViewerNavigator();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.radRichTextEditor1 = new Telerik.WinControls.UI.RadRichTextEditor();
             ((System.ComponentModel.ISupportInitialize)(this.radPdfViewer1)).BeginInit();
             this.radPdfViewer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPdfViewerNavigator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radRichTextEditor1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,6 +46,7 @@
             this.radPdfViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.radPdfViewer1.Controls.Add(this.radRichTextEditor1);
             this.radPdfViewer1.Controls.Add(this.pictureBox1);
             this.radPdfViewer1.Location = new System.Drawing.Point(34, 58);
             this.radPdfViewer1.Name = "radPdfViewer1";
@@ -72,6 +75,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // radRichTextEditor1
+            // 
+            this.radRichTextEditor1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(189)))), ((int)(((byte)(232)))));
+            this.radRichTextEditor1.Location = new System.Drawing.Point(195, 58);
+            this.radRichTextEditor1.Name = "radRichTextEditor1";
+            this.radRichTextEditor1.SelectionFill = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.radRichTextEditor1.Size = new System.Drawing.Size(658, 296);
+            this.radRichTextEditor1.TabIndex = 1;
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,6 +104,7 @@
             this.radPdfViewer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPdfViewerNavigator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radRichTextEditor1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,5 +116,6 @@
         private Telerik.WinControls.UI.RadPdfViewer radPdfViewer1;
         private Telerik.WinControls.UI.RadPdfViewerNavigator radPdfViewerNavigator1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Telerik.WinControls.UI.RadRichTextEditor radRichTextEditor1;
     }
 }
