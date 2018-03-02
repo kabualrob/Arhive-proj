@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
             this.radPdfViewer1 = new Telerik.WinControls.UI.RadPdfViewer();
-            this.radPdfViewerNavigator1 = new Telerik.WinControls.UI.RadPdfViewerNavigator();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radRichTextEditor1 = new Telerik.WinControls.UI.RadRichTextEditor();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.radPdfViewerNavigator1 = new Telerik.WinControls.UI.RadPdfViewerNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.radPdfViewer1)).BeginInit();
             this.radPdfViewer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radPdfViewerNavigator1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRichTextEditor1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPdfViewerNavigator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +46,6 @@
             this.radPdfViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.radPdfViewer1.Controls.Add(this.radRichTextEditor1);
             this.radPdfViewer1.Controls.Add(this.pictureBox1);
             this.radPdfViewer1.Location = new System.Drawing.Point(34, 58);
             this.radPdfViewer1.Name = "radPdfViewer1";
@@ -55,14 +54,14 @@
             this.radPdfViewer1.Text = "radPdfViewer1";
             this.radPdfViewer1.ThumbnailsScaleFactor = 0.15F;
             // 
-            // radPdfViewerNavigator1
+            // radRichTextEditor1
             // 
-            this.radPdfViewerNavigator1.AssociatedViewer = this.radPdfViewer1;
-            this.radPdfViewerNavigator1.Location = new System.Drawing.Point(34, 22);
-            this.radPdfViewerNavigator1.Name = "radPdfViewerNavigator1";
-            this.radPdfViewerNavigator1.Size = new System.Drawing.Size(610, 38);
-            this.radPdfViewerNavigator1.TabIndex = 1;
-            this.radPdfViewerNavigator1.Text = "radPdfViewerNavigator1";
+            this.radRichTextEditor1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(189)))), ((int)(((byte)(232)))));
+            this.radRichTextEditor1.Location = new System.Drawing.Point(1129, 12);
+            this.radRichTextEditor1.Name = "radRichTextEditor1";
+            this.radRichTextEditor1.SelectionFill = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.radRichTextEditor1.Size = new System.Drawing.Size(78, 54);
+            this.radRichTextEditor1.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -75,20 +74,21 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // radRichTextEditor1
+            // radPdfViewerNavigator1
             // 
-            this.radRichTextEditor1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(189)))), ((int)(((byte)(232)))));
-            this.radRichTextEditor1.Location = new System.Drawing.Point(195, 58);
-            this.radRichTextEditor1.Name = "radRichTextEditor1";
-            this.radRichTextEditor1.SelectionFill = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.radRichTextEditor1.Size = new System.Drawing.Size(658, 296);
-            this.radRichTextEditor1.TabIndex = 1;
+            this.radPdfViewerNavigator1.AssociatedViewer = this.radPdfViewer1;
+            this.radPdfViewerNavigator1.Location = new System.Drawing.Point(34, 22);
+            this.radPdfViewerNavigator1.Name = "radPdfViewerNavigator1";
+            this.radPdfViewerNavigator1.Size = new System.Drawing.Size(610, 38);
+            this.radPdfViewerNavigator1.TabIndex = 1;
+            this.radPdfViewerNavigator1.Text = "radPdfViewerNavigator1";
             // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 619);
+            this.Controls.Add(this.radRichTextEditor1);
             this.Controls.Add(this.radPdfViewerNavigator1);
             this.Controls.Add(this.radPdfViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -102,9 +102,9 @@
             this.Load += new System.EventHandler(this.View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radPdfViewer1)).EndInit();
             this.radPdfViewer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radPdfViewerNavigator1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRichTextEditor1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPdfViewerNavigator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
